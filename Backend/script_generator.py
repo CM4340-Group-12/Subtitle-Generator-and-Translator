@@ -92,7 +92,19 @@ def fix_sentence(text: str) -> str:
 #     save_total_limit=1
 # )
 
-# model = T5ForConditionalGeneration.from_pretrained("t5-small")
+# config = T5Config(
+#     vocab_size=32128,   
+#     d_model=512,
+#     num_layers=6,
+#     num_heads=8,
+#     d_ff=2048,
+#     dropout_rate=0.1,
+#     eos_token_id=1,
+#     pad_token_id=0,
+#     decoder_start_token_id=0
+# )
+
+# model = T5ForConditionalGeneration(config)
 
 # trainer = Trainer(
 #     model=model,
